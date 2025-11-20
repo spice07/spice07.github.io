@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>キャラ駒json生成ツール</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ネクロニカ　ドール用</h1>
+  <h2>データ出力txt → json に変換するツール</h2>
+
+  <!-- 1段目：入力 -->
+  <div class="section">
+    <h3>入力（データ出力.txt）</h3>
+    <textarea id="input" placeholder="ここに データ出力(txt) の内容を貼り付け"></textarea>
+    <div class="buttons">
+      <button id="parseBtn">Parse</button>
+      <button id="sampleBtn">サンプルを読み込む</button>
+    </div>
+  </div>
+
+  <!-- 2段目：中央にマニューバ表 -->
+  <div class="section">
+    <h3>マニューバ一覧</h3>
+    <div id="assistSummaryContainer"></div>
+	<br>
+    <div id="maneuverTableContainer"></div>
+
+  </div>
+
+  <!-- 3段目：出力 -->
+  <div class="section">
+    <h3>出力（json）（「チャパレ反映」を押さないとチャパレが駒に出力されません）
+	 <div class="buttons">
+	<button id="ChatPalletBtn">チャパレ反映</button> </div>
+    </h3>
+    <pre id="output" class="output"></pre>
+　　<p>↑これをココフォリアにコピペすると駒が出力されるよ</p>
+    <div class="buttons">
+      <button id="downloadBtn">Download json.txt</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
