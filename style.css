@@ -1,0 +1,170 @@
+/* -------------------------------------------
+   全体レイアウト
+------------------------------------------- */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f6f6f9;
+  color: #333;
+  margin: 20px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* -------------------------------------------
+   入力・出力テキストエリア
+------------------------------------------- */
+textarea {
+  width: 95%;
+  height: 260px;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  resize: vertical;
+}
+
+pre.output {
+  width: 95%;
+  height: 260px;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  overflow-y: scroll;
+  white-space: pre-wrap;
+}
+
+/* -------------------------------------------
+   ボタン
+------------------------------------------- */
+button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0066cc;
+  color: white;
+  cursor: pointer;
+  margin-right: 8px;
+  margin-top: 8px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: #004d99;
+}
+
+/* -------------------------------------------
+   マニューバテーブル・枠
+------------------------------------------- */
+#maneuverTableContainer {
+  width: 99%;
+  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+/* テーブル全体 */
+.maneuver-table {
+  width: max-content; /* 必須：列幅指定を優先させる */
+  border-collapse: collapse;
+}
+
+/* セル */
+.maneuver-table th,
+.maneuver-table td {
+  border: 1px solid #aaa;
+  padding: 4px;
+  text-align: center;
+  font-size: 13px;
+  white-space: nowrap; /* 狭い列に折り返さない */
+}
+
+/* -------------------------------------------
+   列幅指定（確実に効く版）
+------------------------------------------- */
+
+/* 宣言 */
+.maneuver-table th:nth-child(1),
+.maneuver-table td:nth-child(1) { width: 25px; }
+
+/* 判定 */
+.maneuver-table th:nth-child(2),
+.maneuver-table td:nth-child(2) { width: 60px; }
+
+/* attack */
+.maneuver-table th:nth-child(3),
+.maneuver-table td:nth-child(3) { width: 70px; }
+
+/* assist */
+.maneuver-table th:nth-child(4),
+.maneuver-table td:nth-child(4) { width: 90px; }
+
+/* 出目補正 */
+.maneuver-table th:nth-child(5),
+.maneuver-table td:nth-child(5) { width: 20px; }
+
+/* ダメ補正 */
+.maneuver-table th:nth-child(6),
+.maneuver-table td:nth-child(6) { width: 20px;
+    border-right: 3px double #666; /* 二重線 */}
+
+/* 部位 */
+.maneuver-table th:nth-child(7),
+.maneuver-table td:nth-child(7) { width: 70px; }
+
+/* マニューバ名 */
+.maneuver-table th:nth-child(8),
+.maneuver-table td:nth-child(8) { width: 110px; }
+
+/* タイミング */
+.maneuver-table th:nth-child(9),
+.maneuver-table td:nth-child(9) { width: 60px; }
+
+/* コスト */
+.maneuver-table th:nth-child(10),
+.maneuver-table td:nth-child(10) { width: 40px; }
+
+/* 射程 */
+.maneuver-table th:nth-child(11),
+.maneuver-table td:nth-child(11) { width: 40px; }
+
+/* 効果 */
+.maneuver-table th:nth-child(12),
+.maneuver-table td:nth-child(12) { width: 300px; }
+
+/* 削除 */
+.maneuver-table th:nth-child(13),
+.maneuver-table td:nth-child(13) { width: 40px; }
+
+/* 由来 */
+.maneuver-table th:nth-child(14),
+ .maneuver-table td:nth-child(14) { width: 40px; }
+
+/* -------------------------------------------
+   テーブル内の input/select の幅を抑える
+------------------------------------------- */
+.maneuver-table input,
+.maneuver-table select {
+  width: 100%;
+  padding: 2px 3px;
+  font-size: 12px;
+  box-sizing: border-box;
+}
