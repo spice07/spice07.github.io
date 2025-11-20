@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ネクロニカ　ドール駒json生成ツール</title>
+  <title>キャラ駒json生成ツール</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
   <!-- 1段目：入力 -->
   <div class="section">
     <h3>入力（データ出力.txt）</h3>
-    <textarea id="input" placeholder="ここに キャラクター保管所からの データ出力(txt) の内容を貼り付け"></textarea>
+    <textarea id="input" placeholder="ここに データ出力(txt) の内容を貼り付け"></textarea>
     <div class="buttons">
       <button id="parseBtn">Parse</button>
       <button id="sampleBtn">サンプルを読み込む</button>
@@ -35,11 +35,14 @@
 	<button id="ChatPalletBtn">チャパレ反映</button> </div>
     </h3>
     <pre id="output" class="output"></pre>
-　　<p>↑これをココフォリアにコピペすると駒が出力されるよ</p>
+　　<p>↑これをココフォリアにコピペすると駒が出力されます<br>
+	※コストや射程の増減や効果の変化など、判定値とダメージ以外の変化はチャパレ未反映です。</p>
     <div class="buttons">
       <button id="downloadBtn">Download json.txt</button>
     </div>
   </div>
+  お問い合わせはこちらまで　𝕏 : 
+  <a href="https://x.com/spice_nari?s=20">@spice_nari</a>
 
   <script src="script.js"></script>
 </body>
