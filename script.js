@@ -753,7 +753,7 @@ function textOfRoll_A(m){//mはManeuverData
   let diceA="";//補正値
   let damageA="";
   let helpM="";
-  //if(m.roll===1){//naじゃなきゃ補正は考えない
+  if(m.roll===1){//naじゃなきゃ補正は考えない(攻撃種別でしか補正を反映できる情報がないので)
     const data=summary[m.attack-1];
     //console.log(data);
     if(m.assist===0)data.diceA+=Number(m.diceA);
@@ -762,6 +762,7 @@ function textOfRoll_A(m){//mはManeuverData
     if(data.damageA>0){damageA="(+"+data.damageA+"ダメ)";}//ダメ補正
     if(data.damageA<0){damageA="(" +data.damageA+"ダメ)";}
     if(data.names.length>0){helpM="(+"+data.names.join(",") +")";}
-  //}
+  }
   return returnRoll(m.roll) +diceA +" "+m.nameM+"】"+m.effect+damageA+helpM;
 }
+
